@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
-import user from './user';
-import keywords from './keywords';
+import pages from './pages';
 
 export default combineReducers({
-    user,
-    keywords
+    pages
 });

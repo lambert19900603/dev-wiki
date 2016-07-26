@@ -3,8 +3,9 @@ import { createStore } from 'redux';
 import rootReducer from './reducers/root';
 import React from 'react';
 import { render } from 'react-dom';
-import Root from './root'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Root from './root';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './less/main.less';
 
 /*
  Needed for onTouchTap
@@ -16,13 +17,7 @@ injectTapEventPlugin();
 
 const store = createStore(rootReducer);
 
-const App = () => (
-    <MuiThemeProvider>
-        <Root store={store} />
-    </MuiThemeProvider>
-);
-
 render(
-    <App />,
+    <Root store={store} />,
     document.getElementById('root')
 );

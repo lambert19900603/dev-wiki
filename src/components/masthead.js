@@ -1,13 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import { Navbar, Nav, NavItem, Jumbotron } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 class Index extends Component {
     static propTypes = {
-        pages: PropTypes.array.isRequired
+
     }
+
 
     static contextTypes = {
         history: PropTypes.object.isRequired
