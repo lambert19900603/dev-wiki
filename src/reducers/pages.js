@@ -4,6 +4,10 @@ const initialState = [{
     nameCN: "文章"
 }, {
     id: 1,
+    name: "about",
+    nameCN: "关于"
+}, {
+    id: 2,
     name: "signIn",
     nameCN: "登入"
 }];

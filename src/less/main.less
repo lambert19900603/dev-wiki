@@ -1,3 +1,134 @@
-.indexJum {
-  height: 100%;
+@import "theme";
+@import "util";
+
+body {
+  font-family: @global-font-family;
+  font-weight: normal;
+}
+
+.navbar-inverse{
+  margin-bottom: 0;
+  border: none;
+}
+
+.navbar-brand {
+  font-size: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-brand {
+    font-size: 36px;
+    margin-top: 10px;
+  }
+}
+
+.navbar-nav>li>a {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-nav>li>a {
+    font-size: 15px;
+    line-height: 29px;
+    padding: 20.5px 20px;
+  }
+
+  .navbar-nav>li.sign-in>a {
+    padding: 3px 18px;
+    margin: 16.5px 15px;
+    border: 1px solid;
+    border-radius: 3px;
+    text-align: center;
+  }
+}
+
+.navbar-theme {
+  background-color: @global-bg-color !important;
+
+  .navbar-brand,
+  .navbar-nav>li>a {
+    color: @global-color !important;
+  }
+
+  .navbar-brand:hover,
+  .navbar-nav>li>a:hover {
+    color: @global-color-hover !important;
+  }
+
+  .navbar-collapse {
+    border-color: @global-bg-color - #041515 !important;
+  }
+
+  .navbar-toggle {
+    border-color: @global-color !important;
+    background-color: @global-bg-color !important;
+
+    .icon-bar {
+      background-color: @global-color !important;
+    }
+  }
+
+  .navbar-nav>li.sign-in>a {
+    border-color: @global-color;
+  }
+
+  .navbar-nav>li.sign-in>a:hover {
+    border-color: @global-color-hover;
+  }
+}
+
+.masthead {
+  height: 100vh;
+  background: @global-bg-color;
+  .container,
+  .row {
+    height: 100%;
+  }
+}
+
+.masthead-content {
+  .vertical-center;
+  .text-center;
+  color: @global-color;
+
+  .form-group {
+    position: relative;
+    margin-top: 55px;
+  }
+
+  .control-search {
+    font-size: 16px;
+    padding: 13px 30px;
+    height: auto;
+    text-align: center;
+  }
+
+  .glyphicon-search {
+    position: absolute;
+    right: 25px;
+    top: 12px;
+    color: #eee;
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 56px;
+    margin-top: 40px;
+    margin-bottom: 28px;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-top: 24px;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .masthead-content {
+    h1 { font-size: 60px; }
+    h2 { font-size: 32px; }
+  }
 }

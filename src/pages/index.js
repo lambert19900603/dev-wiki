@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
-import { Navbar, Nav, NavItem, Jumbotron } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import Header from '../components/header';
+import Masthead from '../components/masthead';
 
 class Index extends Component {
     static propTypes = {
@@ -19,25 +18,8 @@ class Index extends Component {
 
         return (
             <div>
-                <Navbar>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <Link to="/">Dev Wiki</Link>
-                        </Navbar.Brand>
-                        <Navbar.Toggle />
-                    </Navbar.Header>
-                    <Navbar.Collapse>
-                        <Nav pullRight>
-                            {pages.map((page, i) =>
-                                <LinkContainer to={"/"+page.name}>
-                                    <NavItem eventKey={i+1}>
-                                        {page.nameCN}
-                                    </NavItem>
-                                </LinkContainer>
-                            )}
-                        </Nav>
-                    </Navbar.Collapse>
-                </Navbar>
+                <Header pages={pages} />
+                <Masthead />
             </div>
         );
     }
