@@ -1,0 +1,45 @@
+.masthead {
+  background: @global-bg-color;
+
+  .masthead-content {
+    .text-center;
+    color: @global-color;
+
+    .form-group {
+      position: relative;
+      margin-top: 55px;
+    }
+
+    .control-search {
+      font-size: 16px;
+      padding: 13px 30px;
+      height: auto;
+      text-align: center;
+    }
+
+    .glyphicon-search {
+      position: absolute;
+      right: 25px;
+      top: 12px;
+      color: #eee;
+      font-size: 24px;
+    }
+
+    h1 {
+      font-size: 56px;
+      margin-top: 40px;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-top: 24px;
+      margin-bottom: 36px;
+    }
+
+    @media screen and (min-width: 768px) {
+      h1 { font-size: 60px; }
+      h2 { font-size: 32px; }
+    }
+  }
+}

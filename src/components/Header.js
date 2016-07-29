@@ -8,17 +8,15 @@ export default class Header extends Component {
         pages: PropTypes.array.isRequired
     }
 
-    static contextTypes = {
-        history: PropTypes.object.isRequired
-    }
-
     render() {
-        const { history } = this.context;
         const { pages } = this.props;
 
         return (
             <header>
-                <Navbar inverse className="navbar-theme" fixedTop={true}>
+                <Navbar
+                    inverse
+                    className="navbar-theme"
+                    fixedTop={true}>
                     <Navbar.Header>
                         <Navbar.Brand>
                             <Link to="/">Dev Wiki</Link>
@@ -29,7 +27,12 @@ export default class Header extends Component {
                         <Nav pullRight>
                             {pages.map((page, i) =>
                                 <LinkContainer to={"/"+page.name}>
-                                    <NavItem eventKey={i+1}>
+                                    <NavItem
+                                        className={
+                                            page.name === "signIn" ?
+                                            "sign-in" : undefined
+                                        }
+                                        eventKey={i+1}>
                                         {page.nameCN}
                                     </NavItem>
                                 </LinkContainer>

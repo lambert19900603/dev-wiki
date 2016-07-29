@@ -1,17 +1,9 @@
 import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux';
-import { Link } from 'react-router';
-import { Grid, Row, Col, FormGroup, FormControl, InputGroup, Glyphicon } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Grid, Row, Col, FormGroup, FormControl, Glyphicon } from 'react-bootstrap';
 
 export default class Masthead extends Component {
-    static contextTypes = {
-        history: PropTypes.object.isRequired
-    }
 
     render() {
-        const { history } = this.context;
-
         return (
             <div className="masthead">
                 <Grid>
