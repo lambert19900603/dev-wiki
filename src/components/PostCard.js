@@ -10,7 +10,7 @@ export default class PostCard extends Component {
         const { post } = this.props;
 
         return (
-            <section className="post-card">
+            <div className="post-card">
                 <h2 className="post-card-title">
                     <a href="/post/0">我们是能够自由地在知识的大海中遨游的一代人</a>
                 </h2>
@@ -22,8 +22,12 @@ export default class PostCard extends Component {
                                alt="鲍凌波Lambert"/>
                         鲍凌波Lambert
                     </a>
+                    <span className="split">·</span>
                     发布于
-                    <span className="split"></span>
+                    <span className="split">·</span>
+                    <a href="/cat/java">java</a>
+                    <span className="split">·</span>
+                    2016-07-29
                 </span>
                 <p className="post-card-excerpt">
                     老实说,我也不知道要在这里写点什么,这就是个用来测试的语句。。。
@@ -37,7 +41,7 @@ export default class PostCard extends Component {
                         99
                     </li>
                 </ul>
-            </section>
+            </div>
         );
     }
 }

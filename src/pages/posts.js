@@ -1,30 +1,33 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux';
+import React, { Component, PropTypes } from 'react';
 import Page from '../containers/Page';
 import { Grid, Row, Col } from 'react-bootstrap';
-import PostsBoard from '../components/PostsBoard';
+import PostList from '../components/PostList';
+import WidgetBox from '../containers/WidgetBox';
 
-class Posts extends Component {
-    static propTypes = {
-        posts: PropTypes.array.isRequired
-    }
-
+export default class Posts extends Component {
     render() {
-        const { posts } = this.props;
-
         return (
             <Page>
                 <div className="posts">
-                    <Grid>
+                    <Grid className="padding-top-10">
                         <Row>
-                            <Col sm={12} md={9}>
-                                <PostsBoard />
+                            <Col className="main-board"
+                                 sm={12}
+                                 md={9}>
+                                <PostList />
                             </Col>
-                            <Col
-                                className="side-board"
-                                smHidden={true}
-                                md={3}
-                            />
+                            <Col className="side-board"
+                                 xsHidden={true}
+                                 smHidden={true}
+                                 md={3}>
+                                <WidgetBox title="分类"
+                                           topBorder={false}>
+
+                                </WidgetBox>
+                                <WidgetBox title="标签">
+
+                                </WidgetBox>
+                            </Col>
                         </Row>
                     </Grid>
                 </div>
@@ -32,7 +35,3 @@ class Posts extends Component {
         );
     }
 }
-
-export default connect(state => ({
-    posts: state.posts
-}))(Posts);

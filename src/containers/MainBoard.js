@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import Header from '../components/Header';
+import { Col } from 'react-bootstrap';
 
-export default class Page extends Component {
+export default class MainBoard extends Component {
     static propTypes = {
         children: PropTypes.oneOfType([
             PropTypes.object,
@@ -13,11 +13,8 @@ export default class Page extends Component {
         const { children } = this.props;
 
         return (
-            <div>
-                <Header />
-                <main>
-                    {children}
-                </main>
+            <div className="main-board">
+                {children}
             </div>
         );
     }

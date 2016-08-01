@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-export default class Header extends Component {
+class Header extends Component {
     static propTypes = {
         pages: PropTypes.array.isRequired
     }
@@ -44,3 +45,7 @@ export default class Header extends Component {
         );
     }
 }
+
+export default connect(state => ({
+    pages: state.pages
+}))(Header);
