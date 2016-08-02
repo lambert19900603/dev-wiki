@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Page from '../containers/Page';
 import { Grid, Row, Col } from 'react-bootstrap';
 import PostList from '../components/PostList';
+import CatList from '../components/CatList';
 import WidgetBox from '../containers/WidgetBox';
 
 export default class Posts extends Component {
@@ -22,7 +23,7 @@ export default class Posts extends Component {
                                  md={3}>
                                 <WidgetBox title="分类"
                                            topBorder={false}>
-
+                                    <CatList />
                                 </WidgetBox>
                                 <WidgetBox title="标签">
 
