@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Glyphicon } from 'react-bootstrap';
 
 class CatList extends Component {
     static propTypes = {
