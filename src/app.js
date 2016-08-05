@@ -6,6 +6,7 @@ import { render } from 'react-dom';
 import Root from './root';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
+import 'github-markdown-css/github-markdown.css';
 import './less/main.less';
 
 /*

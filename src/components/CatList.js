@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class CatList extends Component {
     static propTypes = {
         categories: PropTypes.array.isRequired
-    }
+    };
 
     render() {
         const { categories } = this.props;

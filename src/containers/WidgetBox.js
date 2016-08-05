@@ -8,11 +8,11 @@ export default class WidgetBox extends Component {
             PropTypes.object,
             PropTypes.array
         ])
-    }
+    };
 
     static defaultProps = {
         topBorder: true
-    }
+    };
 
     render() {
         const { title, topBorder, children } = this.props;

@@ -7,7 +7,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 class Header extends Component {
     static propTypes = {
         pages: PropTypes.array.isRequired
-    }
+    };
 
     render() {
         const { pages } = this.props;

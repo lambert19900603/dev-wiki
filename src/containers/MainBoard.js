@@ -7,7 +7,7 @@ export default class MainBoard extends Component {
             PropTypes.object,
             PropTypes.array
         ])
-    }
+    };
 
     render() {
         const { children } = this.props;

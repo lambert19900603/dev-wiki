@@ -1,0 +1,27 @@
+.tag-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tag-label {
+  display: inline-block;
+  min-width: 10px;
+  padding: 0 10px;
+  margin: 0 5px 6px 0;
+  font-size: 12px;
+  line-height: 24px;
+  color: #999;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid #999;
+  border-radius: 12px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: @link-text-color;
+    border-color: @link-text-color;
+  }
+}

@@ -7,7 +7,7 @@ export default class SideBoard extends Component {
             PropTypes.object,
             PropTypes.array
         ])
-    }
+    };
 
     render() {
         const { children } = this.props;

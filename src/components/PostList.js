@@ -6,22 +6,18 @@ import PostCard from './PostCard';
 class PostList extends Component {
     static propTypes = {
         posts: PropTypes.array.isRequired
-    }
+    };
 
     render() {
         const { posts } = this.props;
 
         return (
             <ListGroup className="post-list">
-                <ListGroupItem className="post-list-item">
-                    <PostCard post={undefined}/>
-                </ListGroupItem>
-                <ListGroupItem className="post-list-item">
-                    <PostCard post={undefined}/>
-                </ListGroupItem>
-                <ListGroupItem className="post-list-item">
-                    <PostCard post={undefined}/>
-                </ListGroupItem>
+                {posts.map((post, i) =>
+                    <ListGroupItem className="post-list-item">
+                        <PostCard post={post}/>
+                    </ListGroupItem>
+                )}
             </ListGroup>
         );
     }
